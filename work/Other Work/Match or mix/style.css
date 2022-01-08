@@ -33,7 +33,7 @@ body {
 }
 .game-info {
   font-family: "Kingthings Lupineless", serif;
-  color: #250202;
+  color: #ffffff;
   font-size: 3em;
   font-weight: normal;
 }
@@ -87,7 +87,7 @@ body {
   justify-content: center;
   align-items: center;
   z-index: 100;
-  color: #f86707;
+  color: #f85f07;
   font-family: "Kingthings Lupine", serif;
 }
 .overlay-text-small {
@@ -115,7 +115,7 @@ body {
     transform: rotate(0);
   }
   25% {
-    transform: rotate(-30deg);
+    transform: rotate(-30deg) !important;
   }
   75% {
     transform: rotate(30deg);
@@ -132,7 +132,7 @@ body {
   transform: rotateY(180deg);
 }
 .card-value {
-  transform: scale(0.9);
+  transform: scale(1);
   transition: transform 100ms ease-in-out;
 }
 .card-front:hover .card-value {
@@ -175,13 +175,121 @@ body {
 .card-back:hover .spider {
   transform: translateY(0);
 }
-
-@media (max-width: 450px) {
-  #container-mobile {
+@media screen and (max-width: 1100px) {
+  .spider {
+    width: 120px;
+  }
+  .game-container {
+    grid-gap: 10px;
     grid-template-columns: repeat(4, auto);
+  }
+  .card {
+    position: relative;
+    height: 275px;
+    width: 232px;
+  }
+  .cob-web {
+    width: 65px;
+    height: 65px;
+  }
+  .card-face:hover .cob-web {
+    width: 75px;
+    height: 75px;
+  }
+}
+@media screen and (max-width: 800px) {
+  .spider {
+    width: 80px;
+  }
+  .page-title {
+    font-size: 6rem;
+  }
+  .game-container {
+    grid-gap: 8px;
+  }
+  .card {
+    position: relative;
+    height: 200px;
+    width: 170px;
+  }
+  .cob-web {
+    width: 45px;
+    height: 45px;
+  }
+  .card-face:hover .cob-web {
+    width: 55px;
+    height: 55px;
+  }
+  @keyframes overlay-grow {
+    from {
+      background-color: rgba(252, 252, 252, 0);
+      font-size: 0;
+    }
+    to {
+      font-size: 7em;
+      background-color: rgba(0, 2, 2, 0.6);
+      text-align: center;
+    }
+  }
+}
+@media screen and (max-width: 600px) {
+  .spider {
+    width: 60px;
+  }
+  .page-title {
+    font-size: 4rem;
+  }
+  .game-info {
+    font-size: 2rem;
+  }
+  .game-container {
+    grid-gap: 2px;
+  }
+  .card {
+    height: 148px;
+    width: 120px;
+  }
+  .cob-web {
+    width: 30px;
+    height: 30px;
+  }
+  .card-face:hover .cob-web {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .spider {
+    width: 50px;
   }
   .game-info-container {
     flex-direction: column;
     align-items: center;
+  }
+  .card {
+    position: relative;
+    height: 120px;
+    width: 86px;
+  }
+  .card-value {
+    width: 50px;
+  }
+  .page-title {
+    font-size: 3rem;
+  }
+  .game-info {
+    font-size: 1rem;
+  }
+  @keyframes overlay-grow {
+    from {
+      background-color: rgba(252, 252, 252, 0);
+      font-size: 0;
+    }
+    to {
+      font-size: 5em;
+      background-color: rgba(0, 2, 2, 0.6);
+      text-align: center;
+    }
   }
 }
