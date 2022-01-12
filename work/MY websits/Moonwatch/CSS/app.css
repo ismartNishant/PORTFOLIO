@@ -48,24 +48,17 @@ font-family: 'Suez One', serif;*/
     margin-left:1em;
     font-size: 1.3rem;
     text-decoration: none;
-    border: 4px solid #ab36b6;
-    box-shadow: 0px 0px 20px #ab36b6 ;
-    border-radius: 18px;
+    border: 2px solid #ab36b6;
+    box-shadow: 0px 0px 10px #ab36b6 ;
     
 }
 .login li{
     padding:0px;
 }
 .login a:hover{
-    box-shadow: 0px 0px 20px  #c444b9 !important;
-    border-radius: 15px!important;
-    color: #ab36b6 !important;
-    padding: 0px 15px !important;
-    font-weight:bolder;
-    border: 4px solid #fcfbfc;
-    background-color:transparent !important;
-    font-size: 1.3rem;
-    
+    box-shadow: 0px 0px 10px  #fff !important;
+    border: 2px solid #fcfbfc;
+    color: var(--main-color);
 }
 * {
     padding: 0;
@@ -141,10 +134,8 @@ img {
 }
 .nav-menu a {
     font-size: 1.2em;
+    transition: all .5s ease-in-out;
     line-height: 1em;
-    text-transform: uppercase;
-    font-weight:bolder;
-
 }
 .nav-menu a:hover {
     color: var(--main-color);
@@ -409,7 +400,7 @@ a.movie-item:hover {
     font-weight: 700;
 }
 .section {
-    padding-top: 60px;
+    padding-top: 40px;
 }
 
 .section-header {
@@ -424,7 +415,7 @@ a.movie-item:hover {
 }
 
 .pricing-header {
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     text-align: center;
     font-size: 2rem;
     font-weight: 700;
@@ -472,10 +463,12 @@ a.movie-item:hover {
     text-align: center;
     margin-top: 60px;
 }
-
+.my-footer{
+    padding-top: 15px;
+}
 footer.section {
-    margin-top: 80px;
-    padding-bottom: 20px;
+    margin-top: 40px;
+    padding-bottom: 10px;
     position: relative;
     background-color: var(--box-bg);
 }
@@ -507,7 +500,6 @@ footer a.logo:hover {
     display: grid;
     place-items: center;
     border-radius: 50%;
-    color: var(--main-color);
 }
 .social-list a {
     margin: 0em 1rem;
@@ -589,14 +581,7 @@ footer .policy :nth-child(1){
     }
     
 }
-@media (max-width:400px){
-    .hero-slide{
-        margin-bottom: 14px !important;
-    }
-    .top-movies-slide{
-        padding: 0em .5em;
-    }
-}
+
 @media only screen and (max-width: 850px) {
     html {
         font-size: 12px;
@@ -659,5 +644,19 @@ footer .policy :nth-child(1){
 
     .nav-menu.active {
         left: 0;
+    }
+}
+@media (max-width:400px){
+    .hero-slide{
+        margin-bottom: 14px !important;
+    }
+    .top-movies-slide{
+        padding: 0em .5em;
+    }
+    .section {
+        padding-top: 15px;
+    }
+    .section-header {
+        margin-bottom: 15px;
     }
 }
