@@ -12,7 +12,8 @@ font-family: 'Satisfy', cursive; */
 *{
     box-sizing: border-box;
     font-family: Arial, sans-serif;
-    
+    margin: 0;
+    padding: 0;
 }
 html, body{
     margin: 0;
@@ -29,48 +30,50 @@ html, body{
     background-size: cover;
     background-color: rgba(0,0,0,-6);
     background-blend-mode: multiply;
-    padding-bottom: 10em;
-    
-
+    padding-bottom: 12em;
+   margin-bottom: 2rem;
 }
 .main-nav{
-    text-align: center;
-    font-weight: bolder;
-    font-size: 1.5em;
-    border-bottom: 1px solid rgba(8, 8, 8, 0.274);
+    position: fixed;
+    width: 100%;
+    justify-content: center;
 }
-.main-nav li{
-    padding:0 5%;
+.main-nav ul{
+    display: flex;
+    background: #ffffff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.39);
+    justify-content: center;
+}
+.main-nav ul li{
+    margin: .5rem 3rem;
+}
+.main-nav ul li a{
+    font-size: 1.5rem;
+    text-decoration: none;
+    border-radius: 5px;
+    color: #7811cc;
+    padding: 0rem 1rem;
+    font-family: 'Kaushan Script', cursive;
+    transition: all .5s ease-in-out;
+}
+.main-nav ul li a:hover{
+    border: 1px solid #7811cc;
+    color: #000;
+    box-shadow: 0px 0px 10px #7811cc;
 }
 .band-name{
-    color: #111313a6;
+    position: relative;
+    top:2rem;
     text-align: center;
-    margin: 0;
-    font-family:"Booter - Zero Zero";
-    font-size: 6em;
+    font-size: 8rem;
+    color: #7811cc86;
+    font-family: "Booter - Zero Zero";
 }
-.band-name-large{
-    font-size: 8em;
-}
-nav ul{
-    margin: 0;
-}
-nav li{
-    display: inline;
-}
-
-nav a{
-    display: inline-block;
-    color: #9e26ee;
-    padding: .1em .5em;
-    font-family: 'Kaushan Script', cursive;
-    letter-spacing: 1px;
-    text-decoration: none;
-}
-nav a:hover{
-    background-color: rgba(161, 34, 235, 0.3);
-    color: #faf9f9;
-    border-radius: 5px;
+.logo-name{
+    font-size: 6rem;
+    padding-right: 2rem;
+    color: #020003bd;
+    font-family: "Booter - Zero Zero";
 }
 /* 
 ============================
@@ -78,24 +81,31 @@ nav a:hover{
 ============================
 */
 section{
-
+    padding: 2rem 0rem;
     border-bottom: 3px solid #5f5f5f;
 }
 .content-section{
     margin: 1em;
 }
+.content-section p{
+    line-height: 1.5rem;
+}
 .container{
     max-width: 900px;
     margin: 0 auto;
-    padding: 0 1.5em;
+    padding: 1.5em;
 }
 .section-header{
     position: relative;
     font-family: 'Metal Mania', cursive;
     letter-spacing: 1px;
+    padding-left: 2rem;
+    background: #a357e017;
+    border-left:  4px solid #7811cc;
     font-weight: normal;
-    text-align: center;
-     font-size: 2.5em;
+    text-align: left;
+    font-size: 2.5em;
+    margin:2.5rem 0rem 1rem 0rem;
 }
 .about-band-image{
     float: left;
@@ -229,20 +239,28 @@ section{
  footer section   
 ==================
 */
+.footer-ul{
+    margin-left: 3rem !important;
+    margin-top: 1rem;
+}
 .main-footer{
     background-color: #8a08f5;
     color: white;
-    padding: .25em 0
+    padding: .25em 0 !important;
 }
 footer li{
     list-style: none;
     display: inline;
 }
- 
-.main-footer i{
-    font-size: 5em;
-    color:white;
-    
+
+.footer-ul i{
+    font-size: 4em;
+    transition: all .5s ease-in-out;
+    color:white;  
+}
+.footer-ul i:hover{
+    color:#000;
+transform: scale(1.1);
 }
 .main-footer-container{
     display: flex;
