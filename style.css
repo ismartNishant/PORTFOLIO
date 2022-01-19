@@ -28,7 +28,19 @@ font-family: 'Suez One', serif;*/
   --box-bg: #221f1f;
   --text-color: #ffffff;
 }
-
+::-webkit-scrollbar {
+  width: 0.8em;
+}
+::-webkit-scrollbar-track {
+  border-radius: 5px;
+  background: #ffffffd2;
+  box-shadow: inset 0 0 10px rgba(253, 253, 253, 0.87);
+}
+::-webkit-scrollbar-thumb {
+  width: 0.3em;
+  border-radius: 20px;
+  background-color: var(--maincolor);
+}
 section {
   padding: 50px 80px 0px 80px;
 }
@@ -591,6 +603,7 @@ section #services {
   padding: 2rem 1rem;
   position: relative;
   z-index: 3;
+  border-radius: 10px;
   opacity: 0;
   transition: all 0.5s ease-in-out;
   bottom: 13.5rem;
@@ -636,9 +649,6 @@ section #services {
   text-align: center;
   margin: 0.5em;
 }
-/* .work .content .card .card-img img:hover{
-  transform: scale(1.1);
-} */
 /*
 ===================
    contact section
@@ -743,6 +753,47 @@ section #services {
 }
 /*
 ===================
+   scrollbutton 
+===================
+*/
+.scrollToTop-btn {
+  z-index: 999;
+  position: fixed;
+  color: var(--text-color);
+  right: 0;
+  bottom: 15px;
+  text-align: center;
+  line-height: 45px;
+  cursor: pointer;
+  pointer-events: none;
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+.scrollToTop-btn i {
+  font-size: 1.8rem;
+  background: var(--maincolor);
+  padding: 0.6rem 1rem;
+}
+.scrollToTop-btn:hover {
+  bottom: 20px;
+}
+.scrollToTop-btn.active {
+  right: 20px;
+  opacity: 1;
+  pointer-events: auto;
+}
+.reveal {
+  position: relative;
+  transform: translateY(50px);
+  opacity: 0;
+  transition: all 1.5s ease;
+}
+.reveal.active {
+  transform: translateY(0);
+  opacity: 1;
+}
+/*
+===================
    footer section
 ===================
 */
@@ -808,11 +859,15 @@ section #services {
 ===================
 */
 @media (max-width: 1040px) {
+  .scrollToTop-btn i {
+    font-size: 4rem;
+    padding: 0.8rem 1.7rem;
+  }
   header {
     padding: 12px 20px;
   }
   header.sticky {
-    padding: 10px 20px;
+    padding: 5px 20px;
   }
   header .navigation {
     display: none;
@@ -822,8 +877,8 @@ section #services {
     position: fixed;
     background: var(--bgcolor);
     top: 0;
-    right: 0;
-    width: 500px;
+    left: 0;
+    width: 70%;
     height: 100%;
     display: flex;
     justify-content: center;
@@ -834,21 +889,24 @@ section #services {
   }
   header .navigation a {
     color: var(--text-color);
-    font-size: 1.2em;
-    margin: 10px;
+    font-size: 3rem;
+    margin: 39px;
     padding: 0 20px;
     border-radius: 20px;
   }
   header .navigation a:hover {
     color: var(--maincolor);
   }
+  header .brand {
+    font-size: 5rem;
+  }
   .menu-btn {
     position: absolute;
     background: url(images/menu.png) no-repeat;
-    background-size: 30px;
+    background-size: 60px;
     background-position: center;
-    width: 40px;
-    height: 40px;
+    width: 70px;
+    height: 50px;
     right: 0;
     margin: 0 20px;
     cursor: pointer;
@@ -857,12 +915,12 @@ section #services {
   .menu-btn.active {
     z-index: 999;
     background: url(images/close.png) no-repeat;
-    background-size: 25px;
+    background-size: 50px;
     background-position: center;
     transition: 0.3s ease;
   }
   section {
-    padding: 80px 20px;
+    padding: 90px 20px;
   }
   .main .content h2 span {
     font-size: 10rem;
@@ -873,10 +931,16 @@ section #services {
   .animated-text h3 {
     font-size: 3.5em;
   }
-  .section-title {
-    font-size: 1.8em;
+  .title h2 {
+    font-size: 5rem;
+    border-bottom: 3px solid var(--text-color);
+  }
+  .title h2 span {
+    padding-bottom: 6px;
+    border-bottom: 3px solid var(--maincolor);
   }
   .about .content {
+    margin-top: 1rem;
     flex-direction: column;
   }
   .about .content .column {
@@ -924,42 +988,21 @@ section #services {
     margin-bottom: 1em;
   }
 }
-.scrollToTop-btn {
-  z-index: 999;
-  position: fixed;
-  background: var(--maincolor);
-  color: var(--text-color);
-  width: 45px;
-  height: 45px;
-  right: 0;
-  bottom: 10px;
-  font-size: 22px;
-  text-align: center;
-  line-height: 45px;
-  border-radius: 3px;
-  cursor: pointer;
-  pointer-events: none;
-  opacity: 0;
-  transition: all 0.3s ease;
-}
-.scrollToTop-btn.active {
-  right: 20px;
-  opacity: 1;
-  pointer-events: auto;
-}
-.reveal {
-  position: relative;
-  transform: translateY(50px);
-  opacity: 0;
-  transition: all 1.5s ease;
-}
-.reveal.active {
-  transform: translateY(0);
-  opacity: 1;
-}
+
 @media (max-width: 780px) {
+  .scrollToTop-btn i {
+    font-size: 3rem;
+    padding: 0.6rem 1.4rem;
+  }
   section {
-    padding: 20px 12px !important;
+    padding: 80px 25px !important;
+  }
+  .title h2 {
+    font-size: 4rem;
+  }
+  .title h2 span {
+    padding-bottom: 4px;
+    border-bottom: 3px solid var(--maincolor);
   }
   .main .content {
     max-width: 650px;
@@ -973,8 +1016,23 @@ section #services {
     line-height: 3em;
   }
   header .navigation.active {
-    width: 100%;
+    width: 60%;
   }
+  header .brand {
+    font-size: 4rem;
+  }
+  header .navigation a {
+    font-size: 2rem;
+  }
+  .menu-btn {
+    background-size: 50px;
+    width: 60px;
+    height: 40px;
+  }
+  .menu-btn.active {
+    background-size: 40px;
+  }
+
   .animated-text h3 {
     font-size: 2.5rem;
   }
@@ -1000,7 +1058,9 @@ section #services {
     position: relative;
     width: 100% !important;
     height: auto !important;
+    margin-top: 3rem;
   }
+
   .about .content .img-card {
     min-height: 70vh !important;
     margin-left: 1em;
@@ -1040,8 +1100,46 @@ section #services {
   }
 }
 @media (max-width: 550px) {
+  section {
+    padding: 60px 25px !important;
+  }
+  .title h2 {
+    font-size: 3rem;
+  }
+  .title h2 span {
+    padding-bottom: 5px;
+  }
   .main .content h2 span {
     font-size: 5rem;
+  }
+  header {
+    padding: 5px 20px;
+  }
+  header.sticky {
+    padding: 3px 20px;
+  }
+  .menu-btn.active {
+    background-size: 30px;
+  }
+  .menu-btn {
+    background-size: 40px;
+    width: 50px;
+    height: 30px;
+  }
+  header .navigation a {
+    font-size: 1.5rem;
+    margin: 28px;
+  }
+  header .brand {
+    font-size: 3rem;
+  }
+  .scrollToTop-btn {
+    right: 15px !important;
+    bottom: 10px !important;
+  }
+  .scrollToTop-btn i {
+    font-size: 2rem;
+    padding: 0.5rem 1rem;
   }
   .main .content {
     max-width: 450px;
@@ -1068,12 +1166,50 @@ section #services {
   }
 }
 @media (max-width: 450px) {
+  .title h2 {
+    font-size: 2.5rem;
+    border-bottom: 2px solid var(--text-color);
+  }
+  .about .content {
+    margin-top: 0rem;
+  }
+  .title h2 span {
+    padding-bottom: 3px;
+    border-bottom: 2px solid var(--maincolor);
+  }
+  section {
+    padding: 36px 10px !important;
+  }
+  .scrollToTop-btn {
+    right: 10px !important;
+    bottom: 3px !important;
+  }
+  .scrollToTop-btn i {
+    font-size: 1.5rem;
+    padding: 0.4rem 0.8rem;
+  }
+  header .navigation.active {
+    width: 70%;
+  }
+  .menu-btn {
+    margin: 0 11px;
+    background-size: 31px;
+    width: 40px;
+    height: 24px;
+  }
+  .menu-btn.active {
+    background-size: 25px;
+  }
   .main .content h2 {
     font-size: 1em;
     line-height: 3em;
   }
   header .brand {
     font-size: 2rem;
+  }
+  header .navigation a {
+    font-size: 1.4rem;
+    margin: 20px;
   }
   .main .content h2 span {
     font-size: 3.5rem;
