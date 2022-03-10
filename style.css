@@ -464,12 +464,24 @@ b {
   width: 98%;
   background: var(--maincolor);
 }
+.skills .content .col-right .bar .nodejs:before {
+  width: 75%;
+  background: var(--maincolor);
+}
+.skills .content .col-right .bar .mongodb:before {
+  width: 80%;
+  background: var(--maincolor);
+}
+.skills .content .col-right .bar .express:before {
+  width: 30%;
+  background: var(--maincolor);
+}
 .skills .content .col-right .bar .css:before {
-  width: 90%;
+  width: 95%;
   background: var(--maincolor);
 }
 .skills .content .col-right .bar .javascript:before {
-  width: 70%;
+  width: 78%;
   background: var(--maincolor);
 }
 .skills .content .col-right .bar .jquery:before {
@@ -477,7 +489,7 @@ b {
   background: var(--maincolor);
 }
 .skills .content .col-right .bar .react:before {
-  width: 40%;
+  width: 50%;
   background: var(--maincolor);
 }
 /*=======================
