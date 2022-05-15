@@ -5,7 +5,7 @@ window.addEventListener("scroll", function () {
 });
 
 //javascript for responsive navigation sidebar menu
-const menuBtn = document.querySelector(".menu-btn");
+const menuBtn = document.querySelector(".hamburger-menu");
 const navigation = document.querySelector(".navigation");
 const navigationItems = document.querySelectorAll(".navigation a")
 

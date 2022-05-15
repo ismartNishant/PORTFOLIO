@@ -44,6 +44,57 @@ font-family: 'Suez One', serif;*/
 section {
   padding: 50px 80px 0px 80px;
 }
+.hamburger-menu {
+  --size: 30px;
+  height: var(--size);
+  width: var(--size);
+  cursor: pointer;
+  z-index: 101;
+  position: relative;
+  display: none;
+  align-items: center;
+}
+.hamburger {
+  position: relative;
+}
+.hamburger,
+.hamburger::before,
+.hamburger::after {
+  width: var(--size);
+  height: 3px;
+  border-radius: 0.5rem;
+  background-color: var(--text-color);
+  transition: 0.4s;
+}
+.hamburger::before,
+.hamburger::after {
+  content: "";
+  position: absolute;
+  left: 0;
+}
+.hamburger::before {
+  top: -10px;
+}
+.hamburger::after {
+  bottom: -10px;
+
+}
+.hamburger-menu.active .hamburger {
+  background-color: transparent;
+}
+.hamburger-menu.active .hamburger::before {
+  transform-origin: top left;
+  transform: rotate(45deg);
+  left: 6px;
+  background-color: var(--maincolor);
+
+}
+.hamburger-menu.active .hamburger::after {
+  transform-origin: bottom left;
+  transform: rotate(-45deg);
+  left: 6px;
+
+}
 /* 
 ========================
     preloader
@@ -287,7 +338,6 @@ b {
 .about .content {
   position: relative;
   width: 100%;
-  height: 70vh;
   color: var(--text-color);
   display: flex;
   justify-content: space-between;
@@ -295,23 +345,21 @@ b {
 }
 .about .content .col-left {
   position: relative;
-  width: 45%;
+  width: 100%;
 }
 .about .content .col-right {
   position: relative;
-  width: 50%;
+  width: 100%;
 }
 .about .content .col-left .img-card {
   position: relative;
-  width: 90%;
-  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  width: 80%;
+  height: 70vh;
+  overflow: hidden;
 }
 .about .content .col-left .img-card img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 80%;
-  height: 65%;
   object-fit: cover;
   border-radius: 10px;
 }
@@ -397,6 +445,10 @@ b {
 }
 .skills .content .col-right .bar .react:before {
   width: 50%;
+  background: var(--maincolor);
+}
+.skills .content .col-right .bar .material-ui:before {
+  width: 60%;
   background: var(--maincolor);
 }
 /*=======================
@@ -778,6 +830,9 @@ section #services {
 ===================
 */
 @media (max-width: 1040px) {
+   .hamburger-menu {
+  display: grid;
+}
   .scrollToTop-btn i {
     font-size: 4rem;
     padding: 0.8rem 1.7rem;
@@ -864,16 +919,15 @@ section #services {
   }
   .about .content .column {
     position: relative;
-    width: 90%;
+    width: 100%;
   }
   .about .content .col-left .img-card img {
     width: 100%;
-    height: 45rem;
     object-fit: contain;
   }
   .about .content .col-left .img-card {
-    width: 100%;
-    min-height: 45rem;
+    height: 40vh;
+    margin: 0 auto;
   }
   .about .content .col-right {
     margin-top: 40px;
@@ -980,14 +1034,8 @@ section #services {
     margin-top: 3rem;
   }
 
-  .about .content .img-card {
-    min-height: 70vh !important;
-    margin-left: 1em;
-    width: 100%;
-  }
   .about .content .img-card img {
     width: 100% !important;
-    height: 70vh !important;
   }
   .work .work-items a li {
     font-size: 1.3em;
@@ -1143,8 +1191,7 @@ section #services {
     font-size: 2rem;
   }
   .about .content .col-left .img-card {
-    width: 90%;
-    min-height: 45rem;
+    margin-top: 2rem;
   }
   .footer {
     padding: 2rem 1em;
