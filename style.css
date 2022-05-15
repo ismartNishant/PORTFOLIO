@@ -208,8 +208,6 @@ body {
 .title h2 span {
   text-align: center;
   font-family: "Aladin";
-  padding-bottom: .35rem;
-  border-bottom: 3px solid var(--maincolor);
 }
 /*
 ===================
@@ -909,10 +907,10 @@ section #services {
     font-size: 5rem;
     border-bottom: 3px solid var(--text-color);
   }
-  .title h2 span {
+  /* .title h2 span {
     padding-bottom: 6px;
     border-bottom: 3px solid var(--maincolor);
-  }
+  } */
   .about .content {
     margin-top: 1rem;
     flex-direction: column;
@@ -973,10 +971,10 @@ section #services {
   .title h2 {
     font-size: 4rem;
   }
-  .title h2 span {
+  /* .title h2 span {
     padding-bottom: 4px;
     border-bottom: 3px solid var(--maincolor);
-  }
+  } */
   .main .content {
     max-width: 650px;
     padding: 1rem;
@@ -1073,9 +1071,9 @@ section #services {
   .title h2 {
     font-size: 3rem;
   }
-  .title h2 span {
+  /* .title h2 span {
     padding-bottom: 5px;
-  }
+  } */
   .main .content h2 span {
     font-size: 5rem;
   }
@@ -1140,10 +1138,10 @@ section #services {
   .about .content {
     margin-top: 0rem;
   }
-  .title h2 span {
+  /* .title h2 span {
     padding-bottom: 4px;
     border-bottom: 3px solid var(--maincolor);
-  }
+  } */
   section {
     padding: 36px 10px !important;
   }
