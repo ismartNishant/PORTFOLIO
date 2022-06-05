@@ -1,3 +1,10 @@
+//preloader
+$(window).on('load',function(){
+  setTimeout(function(){
+    $(".preloader").fadeOut('slow');
+  },1500)
+})
+
 //javascript for navigation bar effects on scroll
 window.addEventListener("scroll", function () {
   const header = document.querySelector("header");
@@ -51,12 +58,6 @@ function reveal() {
   }
 }
 
-//preloader
-$(window).on('load',function(){
-  setTimeout(function(){
-    $(".preloader").fadeOut('slow');
-  },3000)
-})
 
 
 $(document).ready(function () {

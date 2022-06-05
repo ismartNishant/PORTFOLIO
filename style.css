@@ -456,7 +456,7 @@ b {
 
 .timeline {
   background: #17171B;
-  margin-top: 2rem !important;
+  margin-bottom: 2rem !important;
   margin: 0 auto;
   padding-bottom: 10px;
   border-radius: 10px;
@@ -503,13 +503,20 @@ b {
   color: var(--text-color);
   background: #17171B;
   padding: .3rem 0rem;
-  font-family: "Raleway", sans-serif;
+  font-family: "Oswald", sans-serif;
 }
 
 .timeline .timeline_item h3 {
   color: var(--text-color);
   font-weight: 400;
   padding: .3rem 0rem;
+}
+.timeline a{
+  color: var(--maincolor);
+  transition: all .5s ease-out;
+}
+.timeline a:hover{
+  color: #fff;
 }
 
 .timeline .timeline_item .year {
