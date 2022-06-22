@@ -1,9 +1,9 @@
 //preloader
-$(window).on('load',function(){
-  setTimeout(function(){
-    $(".preloader").fadeOut('slow');
-  },1500)
-})
+// $(window).on('load',function(){
+//   setTimeout(function(){
+//     $(".preloader").fadeOut('slow');
+//   },1500)
+// })
 
 //javascript for navigation bar effects on scroll
 window.addEventListener("scroll", function () {
