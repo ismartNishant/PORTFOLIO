@@ -115,7 +115,7 @@ section {
     preloader
 ========================
 */
-.preloader {
+/* .preloader {
   color: #fff;
   overflow: hidden;
   height: 100%;
@@ -142,7 +142,7 @@ section {
 .wraper {
   height: 50px;
   margin-top: calc(50vh - 1.536rem);
-}
+} */
 
 /*
 ===================
@@ -489,13 +489,12 @@ b {
 .timeline .timeline_item h1 {
   color: var(--maincolor);
   font-size: 1.5rem;
-  font-weight: lighter;
   padding-bottom: .5rem;
   padding-top: 15px;
-  background: #17171B;
   line-height: 1.3;
   letter-spacing: 0.03em;
   font-family: "Oswald", sans-serif;
+  font-weight:500;
 }
 
 .timeline .timeline_item p {
@@ -795,9 +794,9 @@ section #services {
 
 .contact .content .row .card {
   background: var(--text-color);
-  width: 230px;
+  width: 20rem;
   margin: 15px;
-  padding: 25px;
+  padding: 1rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1275,7 +1274,6 @@ section #services {
   }
 
   .services .content .card {
-    width: 241px;
     margin: 8px;
     padding: 8px;
   }
