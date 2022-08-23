@@ -690,9 +690,9 @@ section #services {
   height: 13rem;
 }
 
-.work .image-container .image:hover {
+/* .work .image-container .image:hover {
   transform: translateY(20px);
-}
+} */
 
 .work .image-container .image::before {
   content: "";
@@ -714,6 +714,7 @@ section #services {
 
 .work .image-container .image .inner-info {
   color: #fff;
+  height: 13rem;
   padding: 2rem 1rem;
   position: relative;
   z-index: 3;
@@ -748,7 +749,8 @@ section #services {
 }
 
 .inner-info a:hover {
-  font-size: 1.2rem;
+  display:inline-block;
+  transform: scale(1.1) !important;
   background: var(--maincolor);
 }
 
@@ -1420,9 +1422,7 @@ section #services {
     width: 5rem;
     margin: 1rem;
   }
-  .skills .skill .skill-sec .skill-list {
-    
-}
+ 
 }
 
 @media (max-width: 450px) {
