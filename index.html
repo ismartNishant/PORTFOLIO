@@ -141,7 +141,9 @@
         <h1> 2] Post : Junior Software Intern</h1>
         <h3 class="year">Duration : 8 Months</h3>
         <h3>Company : OkayG Softwares LLP </h3>
-        <p> Experience Letter : <a href='https://drive.google.com/file/d/1Rs7TqkhxiWaY429C6JPP4RG6EzfYQHEd/view?usp=share_link'> See Letter Here
+        <p> Experience Letter : <a
+            href='https://drive.google.com/file/d/1Rs7TqkhxiWaY429C6JPP4RG6EzfYQHEd/view?usp=share_link'> See Letter
+            Here
           </a></p>
         <p> Offer Letter : <a href="https://drive.google.com/file/d/1mHpEkqrzwphLbPVs2xE9-ahTTynvHLz7/view?usp=sharing">
             See Letter Here</a></p>
@@ -181,21 +183,35 @@
               <img src="./images/skills/css3.png" alt="...">
             </div>
             <div>
+              <img src="./images/skills/sass.png" alt="...">
+            </div>
+            <div>
               <img src="./images/skills/javascript (1).png" alt="...">
             </div>
+          
           </div>
         </div>
         <div class="skill-sec reveal">
           <div>
-            <h1><i class="fas fa-laptop"></i>Frontend + Design</h1>
+            <h1><i class="fas fa-laptop"></i>Frontend </h1>
           </div>
           <div class="skill-list">
             <div>
               <img src="./images/skills/react (2).png" alt="...">
             </div>
             <div>
+              <img src="./images/skills/ts.png" alt="...">
+            </div>
+            <div>
               <img src="./images/skills/mui.png" alt="...">
             </div>
+          </div>
+        </div>
+        <div class="skill-sec reveal">
+          <div>
+            <h1><i class="fas fa-laptop"></i> Design</h1>
+          </div>
+          <div class="skill-list">
             <div>
               <img src="./images/skills/adobe-xd.svg" alt="...">
             </div>
@@ -214,6 +230,9 @@
           <div class="skill-list">
             <div>
               <img src="./images/skills/bootstrap.png" alt="...">
+            </div>
+            <div>
+              <img src="./images/skills/tailwind.png" alt="...">
             </div>
             <div>
               <img src="./images/skills/jquery.png" alt="...">
@@ -571,21 +590,28 @@
         </div>
       </div>
       <div class="row">
+        <!-- contact form -->
         <div class="contact-form reveal">
-          <h3>Send Message</h3>
-          <div class="input-box">
-            <input type="text" name="" value="" placeholder="Name">
-          </div>
-          <div class="input-box">
-            <input type="text" name="" value="" placeholder="Email">
-          </div>
-          <div class="input-box">
-            <textarea name="name" rows="8" cols="80" placeholder="Message"></textarea>
-          </div>
-          <div class="input-box">
-            <input type="submit" class="send-btn" name="" value="Send">
-          </div>
+          <form onsubmit="">
+            <h3>Send Message</h3>
+            <div class="input-box">
+              <input type="text" id="name"  placeholder="Your Name" required>
+            </div>
+            <div class="input-box">
+              <input type="email"  id="email" placeholder="Email" required>
+            </div>
+            <div class="input-box">
+              <input type="text"  id="number" placeholder="Phone Number" required>
+            </div>
+            <div class="input-box">
+              <textarea id="message" rows="10" cols="50" placeholder="Message" required></textarea>
+            </div>
+            <div class="input-box">
+              <input type="submit" class="send-btn"  value="Send">
+            </div>
+          </form>
         </div>
+        <!-- -->
       </div>
     </div>
   </section>
@@ -614,6 +640,8 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <!-- my own scripts link  -->
   <script src="script.js" charset="utf-8"></script>
+
+  <script src="https://smtpjs.com/v3/smtp.js"> </script>
 </body>
 
 </html>
