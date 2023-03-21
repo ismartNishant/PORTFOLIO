@@ -110,40 +110,6 @@ section {
 
 }
 
-/* 
-========================
-    preloader
-========================
-*/
-/* .preloader {
-  color: #fff;
-  overflow: hidden;
-  height: 100%;
-  width: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  background: var(--maincolor);
-  z-index: 99999999;
-  display: block;
-}
-
-.preloader h1 {
-  font-family: "Aladin";
-  font-size: 3em;
-  text-align: center;
-  letter-spacing: 2px;
-}
-
-.preloader i {
-  font-size: 0.5em;
-}
-
-.wraper {
-  height: 50px;
-  margin-top: calc(50vh - 1.536rem);
-} */
-
 /*
 ===================
    header section
@@ -383,9 +349,6 @@ b {
    about section
 ===================
 */
-/* .about{
-  padding: 0px 80px !important;
-} */
 .about .content {
   position: relative;
   width: 100%;
@@ -417,10 +380,6 @@ b {
   padding-right: .5rem;
 }
 
-/* .about .content .about-info .about-info-left ,
-.about .content .about-info .about-info-right {
-  margin: 0rem 1rem;
-} */
 .about .content .about-info .about-info-left div,
 .about .content .about-info .about-info-right div {
   margin-bottom: 1rem;
@@ -689,11 +648,6 @@ section #services {
   align-items: flex-end;
   height: 13rem;
 }
-
-/* .work .image-container .image:hover {
-  transform: translateY(20px);
-} */
-
 .work .image-container .image::before {
   content: "";
   position: absolute;
@@ -1114,10 +1068,6 @@ textarea{
     border-bottom: 3px solid var(--text-color);
   }
 
-  /* .title h2 span {
-    padding-bottom: 6px;
-    border-bottom: 3px solid var(--maincolor);
-  } */
   .about .content {
     margin-top: 1rem;
     flex-direction: column;
@@ -1198,10 +1148,6 @@ textarea{
     font-size: 4rem;
   }
 
-  /* .title h2 span {
-    padding-bottom: 4px;
-    border-bottom: 3px solid var(--maincolor);
-  } */
   .main .content {
     max-width: 650px;
     padding: 1rem;
@@ -1330,9 +1276,6 @@ textarea{
     font-size: 3rem;
   }
 
-  /* .title h2 span {
-    padding-bottom: 5px;
-  } */
   .main .content h2 span {
     font-size: 5rem;
   }
@@ -1437,11 +1380,6 @@ textarea{
   .about .content {
     margin-top: 0rem;
   }
-
-  /* .title h2 span {
-    padding-bottom: 4px;
-    border-bottom: 3px solid var(--maincolor);
-  } */
   section {
     padding: 36px 10px !important;
   }
@@ -1490,7 +1428,7 @@ textarea{
   }
 
   .animated-text h3 {
-    font-size: 1.8rem;
+    font-size: 1.3rem;
   }
 
   .main .content {
