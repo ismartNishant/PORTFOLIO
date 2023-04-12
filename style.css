@@ -935,7 +935,7 @@ textarea{
 
 .footer .footer-image {
   width: 13em;
-  border-radius: 50%;
+  border-radius: 20%;
   object-fit: cover;
   overflow: hidden;
   margin: 0 auto;
