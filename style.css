@@ -561,21 +561,24 @@ section #services {
 
 .services .content .card {
   background: var(--text-color);
-  width: 250px;
+  width: 260px;
   margin: 15px;
-  padding: 20px;
+  padding: 15px;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   box-shadow: 0 5px 25px rgba(1 1 1 / 15%);
-  border-radius: 10px;
+  border-radius: 20px 0px;
 }
 
 .services .content .card .service-icon {
-  color: var(--maincolor);
-  font-size: 8em;
-  text-align: center;
+   width: 11rem;
+   margin: 0  auto;
   transition: transform 0.5s ease;
+}
+.service-icon img{
+  width: 100%;
+  object-fit: cover;
 }
 
 .services .content .card:hover .service-icon {
@@ -587,10 +590,12 @@ section #services {
 }
 
 .services .content .card .info h3 {
-  color: var(--maincolor);
-  font-size: 1.2em;
-  font-weight: 700;
-  margin: 10px;
+  color: var(--bgcolor);
+  font-size: 1.4rem;
+  padding-top: .5rem;
+  margin: 0rem;
+  font-family: "Fredoka One", cursive;
+  font-weight: lighter;
 }
 
 /*
@@ -1223,18 +1228,23 @@ textarea{
   .work .work-items a li {
     font-size: 1.3em;
   }
-
-  .services .content .card {
-    margin: 8px;
-    padding: 8px;
-  }
-
   .services .content .card .service-icon {
-    font-size: 4em;
-  }
+    width: 6rem;
+}
+  .services .content .card {
+    margin: 4px;
+    padding: 12px 5px;
+    width: 160px;
 
+  }
+  .services .content .card .info h3 {
+    font-size: 1rem;
+    padding-top: 0.2rem;
+   
+}
+  
   .contact .content .row .card {
-    width: 170px;
+    width: 190px;
     margin: 5px;
     padding: 8px;
   }
