@@ -26,12 +26,12 @@ html, body{
  */
 .main-header{
     color: whitesmoke;
-    background-image: url("images/b1.jpg");
+    background-image: url("images/bts.jpg");
     background-size: cover;
     background-color: rgba(0,0,0,-6);
     background-blend-mode: multiply;
-    padding-bottom: 12em;
-   margin-bottom: 2rem;
+    padding-bottom: 28em;
+   margin-bottom: 0rem;
 }
 .main-nav{
     position: fixed;
@@ -121,33 +121,7 @@ section{
     padding: .67em;
     cursor: pointer;
 }
-.btn-header{
-  margin: 0.5em 6% 0em 6%;
-    color: white;
-    padding: .5em 1.2em;
-    font-weight: lighter;
-    font-size: 1.5em;
-    background: rgba(226, 228, 231, 0.15);
-    border: 3px solid #9809eb;
-}
-.btn-header:hover{
-    background: rgba(239, 245, 247, 0.411);
-    color: #b307f7;
-}
-.btn-play{
-    position: relative;
-    top:2.5em;
-    display: block;
-    margin: 0 auto;
-    align-content: center;
-    justify-content: center;
-    color: #f3f1f5;
-    font-size: 3.5em;
-    padding: 0px 0px 0px 10px;
-    width: 70px;
-    border-radius: 50%;
-    height: 70px;
-}
+
 /*
 ==============================
         tour section      
