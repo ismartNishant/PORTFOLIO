@@ -388,20 +388,29 @@ b {
 }
 
 .about .content .col-left .img-card {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  width: 100%;
-
-  height: 70vh;
-  overflow: hidden;
-  border-radius: 10px;
+  background-image: url("./images/new-profile.jpg");
+  width: 380px;
+  height: 380px;
+  background-size: cover;
+  -webkit-background-position: center;
+  background-position: center center;
+  margin: 20px;
+  box-shadow: 0 5px 20px 5px #dd07357e;
+  animation: profileblob 5s ease-in-out infinite;
+  transition: all 1s ease-in-out;
 }
 
-.about .content .col-left .img-card img {
-  object-fit: cover;
-  border-radius: 10px;
+@keyframes profileblob {
+  0%, 100%{
+      border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  }
+  50%{
+      border-radius: 30% 60% 80% 40% / 50% 60% 30% 60%;
+  }
 }
+
+
+
 
 .about .content .col-right .content-title {
   font-size: 2em;
@@ -560,26 +569,40 @@ section #services {
 }
 
 .services .content .card {
-  background: var(--text-color);
-  width: 260px;
+  background: linear-gradient( 45deg , #dd0735,#1d0107);
+  width: 300px;
+  height: 250px;
   margin: 15px;
   padding: 15px;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   box-shadow: 0 5px 25px rgba(1 1 1 / 15%);
-  border-radius: 20px 0px;
+  border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
 }
+.services .content .card-2{
+  border-radius:  90% 40% 35% 50% / 60% 20% 70% 80%  ;
+}
+.services .content .card-3{
+  border-radius:  45% 80% 70% 60%  / 80% 40% 35% 25%  ;
+}
+.services .content .card-4{
+  border-radius: 50% 80% 70% 77% / 58% 34% 85% 80%
+}
+
+
 
 .services .content .card .service-icon {
    width: 11rem;
-   margin: 0  auto;
+   text-align: center;
+   margin: 0 auto;
+   color: var(--text-color);
   transition: transform 0.5s ease;
 }
-.service-icon img{
-  width: 100%;
-  object-fit: cover;
+.services .content .card .service-icon .bx{
+  font-size: 10rem;
 }
+
 
 .services .content .card:hover .service-icon {
   transform: translateY(-10px);
@@ -590,7 +613,7 @@ section #services {
 }
 
 .services .content .card .info h3 {
-  color: var(--bgcolor);
+  color: var(--text-color);
   font-size: 1.4rem;
   padding-top: .5rem;
   margin: 0rem;
@@ -1088,14 +1111,12 @@ textarea{
     justify-content: space-around !important;
   }
 
-  .about .content .col-left .img-card img {
-    width: 100%;
-    object-fit: contain;
-  }
+  
 
   .about .content .col-left .img-card {
-    height: 40vh;
     margin: 0 auto;
+    width: 280px;
+    height: 280px;
   }
 
   .about .content .col-right {
@@ -1150,6 +1171,7 @@ textarea{
   }
 
   .title h2 {
+   
     font-size: 4rem;
   }
 
@@ -1195,7 +1217,7 @@ textarea{
 
   .section-title {
     font-size: 2.5em;
-    margin-bottom: 0em !important;
+    
   }
 
   .main .image img {
@@ -1221,24 +1243,33 @@ textarea{
     margin-top: 3rem;
   }
 
-  .about .content .img-card img {
-    width: 100% !important;
+ 
+  .work .image-container .image {
+    width: 300px;
+  
   }
-
   .work .work-items a li {
     font-size: 1.3em;
   }
   .services .content .card .service-icon {
     width: 6rem;
 }
+.services .content {
+  gap: 1rem;
+}
   .services .content .card {
     margin: 4px;
     padding: 12px 5px;
-    width: 160px;
+    width: 310px;
+    height: 230px;
 
   }
+  .services .content .card .service-icon .bx{
+    font-size: 8rem;
+  }
+  
   .services .content .card .info h3 {
-    font-size: 1rem;
+    font-size: 1.5rem;
     padding-top: 0.2rem;
    
 }
