@@ -401,11 +401,14 @@ b {
 }
 
 @keyframes profileblob {
-  0%, 100%{
-      border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+
+  0%,
+  100% {
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
   }
-  50%{
-      border-radius: 30% 60% 80% 40% / 50% 60% 30% 60%;
+
+  50% {
+    border-radius: 30% 60% 80% 40% / 50% 60% 30% 60%;
   }
 }
 
@@ -462,7 +465,7 @@ b {
   line-height: 1.3;
   letter-spacing: 0.03em;
   font-family: "Oswald", sans-serif;
-  font-weight:500;
+  font-weight: 500;
 }
 
 .timeline .timeline_item p {
@@ -478,11 +481,13 @@ b {
   font-weight: 400;
   padding: .3rem 0rem;
 }
-.timeline a{
+
+.timeline a {
   color: var(--maincolor);
   transition: all .5s ease-out;
 }
-.timeline a:hover{
+
+.timeline a:hover {
   color: #fff;
 }
 
@@ -532,8 +537,9 @@ skills
   margin: 1rem 3rem;
   transition: all .5s ease-in-out;
 }
+
 .skills .skill .skill-sec .skill-list img:hover {
- transform: scale(1.2);
+  transform: scale(1.2);
 }
 
 .skills .skill .skill-sec h1 {
@@ -554,7 +560,9 @@ section #services {
   padding-bottom: 10px;
 }
 
-.services .content {
+
+.services .content,
+.contact .content {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -562,64 +570,76 @@ section #services {
   margin-top: 20px;
 }
 
-.title p {
-  font-size: 1em;
-  width: 80%;
-  color: var(--text-color);
-}
-
-.services .content .card {
-  background: linear-gradient( 45deg , #dd0735,#1d0107);
+.my-card {
+  position: relative;
   width: 300px;
-  height: 250px;
-  margin: 15px;
-  padding: 15px;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  box-shadow: 0 5px 25px rgba(1 1 1 / 15%);
-  border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
-}
-.services .content .card-2{
-  border-radius:  90% 40% 35% 50% / 60% 20% 70% 80%  ;
-}
-.services .content .card-3{
-  border-radius:  45% 80% 70% 60%  / 80% 40% 35% 25%  ;
-}
-.services .content .card-4{
-  border-radius: 50% 80% 70% 77% / 58% 34% 85% 80%
-}
-
-
-
-.services .content .card .service-icon {
-   width: 11rem;
-   text-align: center;
-   margin: 0 auto;
-   color: var(--text-color);
-  transition: transform 0.5s ease;
-}
-.services .content .card .service-icon .bx{
-  font-size: 10rem;
-}
-
-
-.services .content .card:hover .service-icon {
-  transform: translateY(-10px);
-}
-
-.services .content .card .info {
+  cursor: pointer;
   text-align: center;
+  padding: 30px 20px;
+  background: #fff;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  margin: 10px;
+  box-sizing: border-box;
+  overflow: hidden;
 }
 
-.services .content .card .info h3 {
-  color: var(--text-color);
-  font-size: 1.4rem;
-  padding-top: .5rem;
-  margin: 0rem;
-  font-family: "Fredoka One", cursive;
-  font-weight: lighter;
+.my-card::before {
+  content: '';
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(255, 255, 255, 0.2);
+  z-index: 2;
 }
+
+.my-card .my-card-text {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  background: #000;
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  font-size: 40px;
+  font-weight: 700;
+  transition: 1s;
+}
+
+.my-card .my-card-text {
+  background: #f3094f;
+  box-shadow: 0 0 0 #f3094f;
+}
+
+.my-card:hover .my-card-text {
+  box-shadow: 0 0 0 400px #f3094f;
+}
+
+.my-card .info-text {
+  position: relative;
+  transition: .5s;
+}
+
+.my-card:hover .info-text {
+  color: #fff;
+}
+
+.my-card:hover .my-card-text {
+  color: #000;
+  background: #fff;
+}
+
+.info-text h3 {
+  margin: 20px 0;
+}
+
+
+
 
 /*
 ===================
@@ -676,6 +696,7 @@ section #services {
   align-items: flex-end;
   height: 13rem;
 }
+
 .work .image-container .image::before {
   content: "";
   position: absolute;
@@ -731,7 +752,7 @@ section #services {
 }
 
 .inner-info a:hover {
-  display:inline-block;
+  display: inline-block;
   transform: scale(1.1) !important;
   background: var(--maincolor);
 }
@@ -762,58 +783,14 @@ section #services {
 ===================
 */
 .contact .content {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
   flex-direction: column;
-  margin-top: 20px;
 }
 
 .contact .content .row {
   display: flex;
-  justify-content: center;
   flex-wrap: wrap;
-  flex-direction: row;
-}
-
-.contact .content .row .card {
-  background: var(--text-color);
-  width: 20rem;
-  margin: 15px;
-  padding: 1rem;
-  display: flex;
   justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  box-shadow: 0 5px 25px rgba(1 1 1 / 15%);
-  border-radius: 10px;
-}
-
-.contact .content .row .card .contact-icon {
-  color: var(--maincolor);
-  font-size: 4em;
-  text-align: center;
-  transition: transform 0.5s ease;
-}
-
-.contact .content .row .card:hover .contact-icon {
-  transform: translateY(-10px);
-}
-
-.contact .content .row .card .info {
-  text-align: center;
-}
-
-.contact .content .row .card .info h3 {
-  color: var(--bgcolor);
-  font-size: 1.2em;
-  font-weight: 700;
-  margin: 10px;
-}
-
-.contact .content .row .card .info span {
-  color: #666;
-  font-weight: 500;
+  flex-direction: row;
 }
 
 .contact-form {
@@ -852,7 +829,8 @@ section #services {
   border-radius: 5px;
   resize: none;
 }
-textarea{
+
+textarea {
   height: 10rem;
 }
 
@@ -948,10 +926,9 @@ textarea{
   border-bottom: 1px solid #5a5c5b;
 }
 
-.devby {
+.devby p ,
+.terms  {
   font-size: 1.5em !important;
-  font-family: "Fredoka one";
-  letter-spacing: 1.5px;
 }
 
 .terms {
@@ -1111,7 +1088,7 @@ textarea{
     justify-content: space-around !important;
   }
 
-  
+
 
   .about .content .col-left .img-card {
     margin: 0 auto;
@@ -1171,7 +1148,7 @@ textarea{
   }
 
   .title h2 {
-   
+    margin-bottom: .5rem;
     font-size: 4rem;
   }
 
@@ -1217,7 +1194,7 @@ textarea{
 
   .section-title {
     font-size: 2.5em;
-    
+
   }
 
   .main .image img {
@@ -1243,53 +1220,14 @@ textarea{
     margin-top: 3rem;
   }
 
- 
+
   .work .image-container .image {
     width: 300px;
-  
+
   }
+
   .work .work-items a li {
     font-size: 1.3em;
-  }
-  .services .content .card .service-icon {
-    width: 6rem;
-}
-.services .content {
-  gap: 1rem;
-}
-  .services .content .card {
-    margin: 4px;
-    padding: 12px 5px;
-    width: 310px;
-    height: 230px;
-
-  }
-  .services .content .card .service-icon .bx{
-    font-size: 8rem;
-  }
-  
-  .services .content .card .info h3 {
-    font-size: 1.5rem;
-    padding-top: 0.2rem;
-   
-}
-  
-  .contact .content .row .card {
-    width: 190px;
-    margin: 5px;
-    padding: 8px;
-  }
-
-  .contact .content .row .card .contact-icon {
-    font-size: 2.5em;
-  }
-
-  .contact .content .row .card .info h3 {
-    font-size: 0.9em;
-  }
-
-  .contact .content .row .card .info span {
-    font-size: 0.8em;
   }
 
   .btn {
@@ -1310,7 +1248,7 @@ textarea{
 
 @media (max-width: 650px) {
   section {
-    padding: 60px 25px !important;
+    padding: 20px 10px !important;
   }
 
   .title h2 {
@@ -1319,6 +1257,11 @@ textarea{
 
   .main .content h2 span {
     font-size: 5rem;
+  }
+  
+  .policy p ,
+  .terms {
+    font-size: .8em !important;
   }
 
   header {
@@ -1409,7 +1352,7 @@ textarea{
     width: 5rem;
     margin: 1rem;
   }
- 
+
 }
 
 @media (max-width: 450px) {
@@ -1421,9 +1364,7 @@ textarea{
   .about .content {
     margin-top: 0rem;
   }
-  section {
-    padding: 36px 10px !important;
-  }
+
 
   .scrollToTop-btn {
     right: 10px !important;
@@ -1521,30 +1462,22 @@ textarea{
     font-size: 1rem;
   }
 
-  .contact .content .row .card {
-    width: 160px;
-  }
-
-  .contact .content .row .card .info span {
-    font-size: 0.7em;
-  }
-
-  .contact .content .row .card .info h3 {
-    margin: 0px;
-  }
   .skills .content .skill {
     padding: 0rem 1rem;
- }
- .skills .skill .skill-sec .skill-list {
-  padding: 1rem 0rem 0rem 0rem;
-}
-.skills .skill .skill-sec .skill-list img {
-  width: 4rem;
-  margin: 0.5rem;
-}
-.skills .skill .skill-sec h1 {
-  font-size: 1.5rem;
-}
+  }
+
+  .skills .skill .skill-sec .skill-list {
+    padding: 1rem 0rem 0rem 0rem;
+  }
+
+  .skills .skill .skill-sec .skill-list img {
+    width: 4rem;
+    margin: 0.5rem;
+  }
+
+  .skills .skill .skill-sec h1 {
+    font-size: 1.5rem;
+  }
 }
 
 @media (max-width: 280px) {
