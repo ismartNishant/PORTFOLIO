@@ -932,6 +932,7 @@ textarea {
 }
 
 .terms {
+  font-size: 1rem !important;
   justify-content: right;
   color: #5a5c5b;
   margin: 1em 4em -1em 0em;
