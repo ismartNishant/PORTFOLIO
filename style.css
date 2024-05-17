@@ -928,8 +928,8 @@ textarea {
   border-bottom: 1px solid #5a5c5b;
 }
 
-.devby p ,
-.terms  {
+.devby p,
+.terms {
   font-size: 1.5em !important;
 }
 
@@ -1250,6 +1250,10 @@ textarea {
 }
 
 @media (max-width: 650px) {
+  .contact-form {
+    padding: 10px 15px ;
+  }
+
   section {
     padding: 20px 10px !important;
   }
@@ -1261,8 +1265,8 @@ textarea {
   .main .content h2 span {
     font-size: 5rem;
   }
-  
-  .policy p ,
+
+  .policy p,
   .terms {
     font-size: .8em !important;
   }
@@ -1367,7 +1371,6 @@ textarea {
   .about .content {
     margin-top: 0rem;
   }
-
 
   .scrollToTop-btn {
     right: 10px !important;
