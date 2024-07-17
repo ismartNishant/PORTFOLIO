@@ -1,0 +1,125 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  background: #000;
+  color: #fff;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.keys {
+  display: flex;
+  flex-wrap: wrap;
+  margin:  0 auto;
+  justify-items: center;
+}
+section{
+  padding: 1rem;
+  justify-content: center;
+}
+.key {
+  flex: 1 1 20rem;
+  border-radius: 20px;
+  margin: .5rem;
+  margin-left: 0px;
+  height: 18rem;
+  text-align: center;
+  padding-top: 80px;
+  text-shadow: 0 0 0.5rem black;
+  transition: all 0.07s ease; /*this transition is for that pop up animation*/
+  background: linear-gradient(45deg,#d007eb, #0d47e9);
+}
+
+kbd {
+  font-size: 5rem;
+  display: block;
+}
+
+.sound {
+  font-size: 3rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #00ff40;
+}
+
+.playing {
+  transform: scale(1.02);
+  box-shadow: 0 0 1rem #fff; /* but we want to remove this box shadow when the sound finished*/
+}
+@media screen  and (max-width:1100px){
+  .keys{
+    margin-top: 3rem;
+  }
+  .key {
+    flex: 1 1 25rem;
+    margin: .1rem;
+    height: 25rem;
+    width: 5rem;
+  }
+  kbd {
+    font-size: 8rem; 
+  }
+  .sound {
+    font-size: 4rem;
+  }
+
+}
+@media screen  and (max-width:800px){
+  .keys{
+    margin-top: 1rem;
+  }
+  .key {
+    flex: 1 1 20rem;
+    height: 20rem;
+  }
+  kbd {
+    font-size: 7rem; 
+  }
+  .sound {
+    font-size: 3rem;
+  }
+
+}
+@media screen  and (max-width:600px){
+  .keys{
+    margin-top: 0rem;
+  }
+  .key {
+    flex: 1 1 14rem;
+    margin: .1rem;
+    height: 14rem;
+    width: 5rem;
+  }
+  kbd {
+    font-size: 5rem; 
+  }
+  .sound {
+    font-size: 2rem;
+  }
+
+}
+@media screen  and (max-width:450px){
+  .keys{
+    margin-top: 3rem;
+  }
+  .key {
+    flex: 1 1 8rem;
+    border-radius: 20px;
+    margin: .1rem;
+    height: 10.5rem;
+    width: 5rem;
+  }
+  kbd {
+    font-size: 3rem;
+    position:relative;
+    bottom: 2rem;
+  }
+  .sound {
+    font-size: 1.5rem;
+  }
+}
