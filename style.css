@@ -388,12 +388,12 @@ b {
 }
 
 .about .content .col-left .img-card {
-  background-image: url("./images/new-profile.jpg");
-  width: 380px;
-  height: 380px;
+  background-image: url("./images/Nishant.png");
+  width: 400px;
+  height: 400px;
   background-size: cover;
-  -webkit-background-position: center;
-  background-position: center center;
+  background-position: top center; /* Shows the top of the image */
+  background-repeat: no-repeat;
   margin: 20px;
   box-shadow: 0 5px 20px 5px #dd07357e;
   animation: profileblob 5s ease-in-out infinite;
@@ -879,6 +879,7 @@ textarea {
   text-align: center;
   line-height: 45px;
   cursor: pointer;
+
   pointer-events: none;
   opacity: 0;
   transition: all 0.5s ease;
@@ -886,6 +887,7 @@ textarea {
 
 .scrollToTop-btn i {
   font-size: 1.8rem;
+  border-radius: 20%;
   background: var(--maincolor);
   padding: 0.6rem 1rem;
 }
